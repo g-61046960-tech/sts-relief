@@ -1,0 +1,15 @@
+<!doctype html><html lang="ms"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>e-Relief STS</title><link rel="stylesheet" href="style.css"></head><body>
+<header><img src="logo-sts.jpg" alt="Logo Sekolah Tinggi Segamat"><div><h1>e-RELIEF STS</h1><p>Sistem Penjanaan Guru Ganti • Sekolah Tinggi Segamat</p></div><button id="settingsBtn" class="ghost">⚙ Tetapan Guru</button></header>
+<main>
+<section class="hero card"><div><span class="eyebrow">JADUAL GANTI PINTAR</span><h2>Jana relief secara adil, pantas dan boleh diubah.</h2><p>Jadual guru telah dimasukkan daripada pangkalan data STS. Data disimpan dalam pelayar peranti ini dan boleh dicetak sebagai PDF.</p></div><div class="stats"><div><b id="teacherCount">0</b><span>Guru</span></div><div><b id="absentCount">0</b><span>Tidak hadir</span></div><div><b id="reliefCount">0</b><span>Relief</span></div></div></section>
+<section class="grid2">
+<div class="card"><h3>1. Maklumat Hari</h3><div class="formgrid"><label>Tarikh<input id="date" type="date"></label><label>Hari<select id="day"><option>Isnin</option><option>Selasa</option><option>Rabu</option><option>Khamis</option><option>Jumaat</option></select></label></div></div>
+<div class="card"><h3>2. Guru Tidak Hadir</h3><div class="row"><select id="absentSelect"></select><button id="addAbsent">+ Masukkan Nama</button></div><p class="hint">Selepas memilih guru, tandakan sama ada tidak hadir sepanjang hari atau pada masa tertentu sahaja.</p><div id="absentCards" class="absentCards"></div></div>
+</section>
+<section class="card actions"><button id="generate" class="primary">⚡ Jana Relief Automatik</button><button id="preview">🖨 Preview / Cetak PDF</button><button id="reset" class="danger">↺ Kosongkan</button></section>
+<section class="card"><div class="sectionhead"><div><h3>Jadual Relief</h3><p id="status">Belum dijana.</p></div><label class="switch"><input id="manualMode" type="checkbox"><span></span> Mod manual</label></div><div class="tablewrap"><table><thead><tr><th>Masa</th><th>Guru Tidak Hadir</th><th>Subjek / Kelas</th><th>Guru Ganti</th><th>Catatan</th></tr></thead><tbody id="reliefBody"><tr><td colspan="5" class="empty">Masukkan guru tidak hadir dan tekan “Jana Relief Automatik”.</td></tr></tbody></table></div></section>
+<section class="card rules"><h3>Peraturan Aktif</h3><div id="ruleList"></div></section>
+</main>
+<dialog id="settings"><form method="dialog"><div class="dialoghead"><h3>Tetapan Guru, Jawatan & Cuti</h3><button value="cancel" class="icon">×</button></div><p>Tetapkan jawatan dan status cuti. Guru bercuti panjang tidak akan dipilih sebagai guru ganti.</p><input id="searchTeacher" placeholder="Cari nama guru..."><div id="teacherSettings" class="teacherSettings"></div><div class="dialogactions"><button id="saveSettings" value="default" class="primary">Simpan Tetapan</button></div></form></dialog>
+<footer>Hak Milik Sekolah Tinggi Segamat • Sistem e-Relief STS</footer>
+<script src="data.js"></script><script src="app.js"></script></body></html>
